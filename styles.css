@@ -14,3 +14,8 @@
 	font-size:  80px;
 	border: 2px solid black;
 }
+
+.winning-square{
+	background-color: green !important;
+	color: red !important;
+}
