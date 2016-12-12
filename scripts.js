@@ -33,6 +33,10 @@ function onePlayerGame(){
 	computerPlayer = true;
 }
 
+$('.square').click(function(){
+	markSquare(this)
+})
+
 function markSquare(currentSquare){
 	// console.log(currentSquare.id);
 	if((currentSquare.innerHTML === "X") || (currentSquare.innerHTML === "O")){
@@ -99,7 +103,7 @@ function checkWin(whoJustWent, currentPlayerSquares){
 
 function gameOver(whoJustWon, winningCombo){
 	var message = "Congrats to player " + whoJustWon + ". You just won with " + winningCombo;
-	document.getElementById('message').innerHTML = message;
+	$('#message').html(message);
 	for(var i=0; i<winningCombo.length; i++){
 		document.getElementById(winningCombo[i]).className += ' winning-square';
 	}
